@@ -1,0 +1,13 @@
+<!ELEMENT dinopedia (dinosaurio*)>
+<!ELEMENT dinosaurio (nombre, descripcion, genero, tipo, opcionales?)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+
+<!ELEMENT opcionales (nombre_cientifico?, fecha_descubrimiento?, descubridor?, periodo_vida?)>
+<!ELEMENT nombre_cientifico (#PCDATA)>
+<!ELEMENT fecha_descubrimiento (#PCDATA)>
+<!ELEMENT descubridor (#PCDATA)>
+<!ELEMENT periodo_vida (#PCDATA)>

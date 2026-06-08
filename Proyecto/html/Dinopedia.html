@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Proyecto/css/Dinopedia.css">
+    <title>Dinopedia</title>
+</head>
+
+<body>  
+    <div class="contenedor">
+        <div class="panelBarraSuperior">
+            <h1>DinoPedia <br> DinoCultura y datos Prehistoricos</h1>
+                <button id="usuario">
+                    <img id="usuarioLogo" src="/Proyecto/images/usuarioLogo.png" alt="logo del usuario">
+                </button>
+        </div>
+        <div class="zonaContenido">
+            <div class="panelVinculos">
+                <h2>Panel Vinculos</h2>
+                <button id="inicio">
+                    <h3>Inicio</h3>
+                </button>
+                <button id="Catalogo">
+                    <h3>Catalogo</h3>
+                </button>
+                <button id="Registrar">
+                    <h3>Registrar</h3>
+                </button>
+                <button id="MisContribuciones">
+                    <h3>Mis contribuciones</h3>
+                </button>
+                <div class="filtros">
+                    <h2>Filtros</h2>
+                    <textarea name="" id="textoFiltro"></textarea>
+                    <label class="filtroId">
+                        <input type="checkbox" name="Id" value="false">
+                        Id
+                    </label>
+                    <label class="filtroNombre">
+                        <input type="checkbox" name="Nombre" value="false">
+                        Nombre
+                    </label>
+                    <label class="filtroGenero">
+                        <input type="checkbox" name="Genero" value="false">
+                        Genero
+                    </label>
+                    <label class="filtroTipo">
+                        <input type="checkbox" name="Tipo" value="false">
+                        Tipo
+                    </label>
+                </div>
+            </div>
+            <div class="vistaInicio">
+                <h2>Bienvenido a esta pagina</h2>
+                <p>Esta pagina es una biblioteca digital que recopila 
+                    informacion de diferentes especies de dinosaurios de muchos 
+                    generos, tipos y periodos, podras visualizar informacion de muchas especies, 
+                    tu contribucion es clave para continuar con esta comunidad <br> <br>
+                    los usuarios de esta plataforma pueden registrar nuevas especies 
+                    tanto reales como ficticias que gustes compartir con otras personas
+                    interesadas en el tema. <br><br>
+                    Cabe detallar que en esta plataforma esta enfocada en preservar y actualizar
+                    conocimiento con fines de estudio e interes historico, por lo que entradas
+                    muy radicales que desentonen con el enfoque de la plataforma o no cumplan
+                    con nuestras normas de integridad seran eliminadas inmediatamente.
+                </p>
+                <h2>Divierte conociendo mas especies y agregando otras a nuestro catalogo</h2>
+
+                <img id="imagenInicio1" src="/Proyecto/images/imagenInicio.jpg" alt="Imagen inicio">
+            </div>
+            
+            <div class="Contenido"></div>
+            <div id="fichaTecnica">
+                <div class="datos">
+                    <h2 id="nombre">NOMBRE:</h2>
+                    <p id="descripccion">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni enim totam, tempore quibusdam rem, saepe aliquam reprehenderit fugiat doloremque vitae consequatur numquam debitis ullam cum. Perferendis dolorem officiis eos nulla?
+                    </p>
+                    <h2 id="genero">Genero:</h2>
+                    <h2 id="dieta">Dieta:</h2>
+                    <hr>
+                    <h2 id="nombreCientifico">Nombre cientifico:</h2>
+                    <h2 id="fechaDescubrimiento">Fecha de descubrimiento</h2>
+                    <h2 id="descubridor">Descubridor:</h2>                        
+                    <h2 id="periodoVida">Periodo de vida:</h2>
+                </div>
+                <figure class="contenedor-imagen">
+                    <img id="imagenDinosaurio" src="/Proyecto/images/imagenInicio.jpg" alt="Imagen inicio">
+                    <h2>Imagen ilustrativa</h2>
+                </figure> 
+            </div>
+            <div class="vistaRegistro">
+                <div class="campos">
+                    <h2 id="indicacion">Registra a tu dinosaurio:</h2>
+                    
+                    <div class="campo-bloque">
+                        <h2>Nombre:</h2>
+                        <textarea id="tfNombre"></textarea>
+                    </div>
+                    <div class="campo-bloque">
+                        <h2>Descripccion:</h2>
+                        <textarea id="tfDescripccion"></textarea>
+                    </div>
+                    <div class="campo-bloque">
+                        <h2>Genero:</h2>
+                        <textarea id="tfGenero"></textarea>
+                    </div>
+                    <div class="campo-bloque">
+                        <h2>Tipo:</h2>
+                        <textarea id="txTipo"></textarea>
+                    </div>
+                    
+                    <hr>
+                    
+                    <h2 class="full-width">Opccional</h2>
+                    
+                    <div class="campo-bloque">
+                        <h2>Nombre cientifico:</h2>
+                        <textarea id="tfNombreC"></textarea>
+                    </div>
+                    <div class="campo-bloque">
+                        <h2>Fecha de descubrimiento:</h2>
+                        <textarea id="tfFechaD"></textarea>
+                    </div>
+                    <div class="campo-bloque">
+                        <h2>Descubridor:</h2>
+                        <textarea id="tfDescubridor"></textarea>
+                    </div>
+                    <div class="campo-bloque">
+                        <h2>Periodo de vida:</h2>
+                        <textarea id="tfPeriodoV"></textarea>
+                    </div>
+                    
+                    <div class="botonImagen full-width">
+                        <button id="btnSubir">Seleccionar imagen</button>
+                        <input type="file" id="archivoInput" accept="image/*" style="display: none;">
+                    </div>
+                    <button id="btnAgregar">
+                        Agregar Entrada
+                    </button>
+                </div>
+            </div>
+            <div class="vistaUsuario">
+                <button id="btnUsuario">
+                    <img src="/Proyecto/images/usuarioLogo.png" id="imagenVistaUsuario" alt="">
+                </button>
+                <h2 id="Id_usuario">Id de usuario:</h2>
+                <h2 id="nombreUsuario">Nombre de usuario:</h2>
+                <p id="descripccionUsuario">
+                    sobre mi:    
+                </p>
+            </div>
+        </div>
+    </div>
+    <input type="file" id="selectorCarpeta" webkitdirectory directory multiple style="display: none;">
+</body>
+</html>
+
+<script src="/Proyecto/js/script.js"></script>

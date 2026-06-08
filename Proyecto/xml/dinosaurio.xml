@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dinopedia SYSTEM "dinosaurio.dtd">
+
+<dinopedia>
+    <dinosaurio>
+        <nombre>T-Rex</nombre>
+        <descripcion>Dinosaurio carnívoro del periodo Cretácico.</descripcion>
+        <genero>Theropoda</genero>
+        <tipo>Carnívoro</tipo>
+        <opcionales>
+            <nombre_cientifico>Tyrannosaurus rex</nombre_cientifico>
+            <fecha_descubrimiento>1905</fecha_descubrimiento>
+            <descubridor>Barnum Brown</descubridor>
+            <periodo_vida>Cretácico superior</periodo_vida>
+        </opcionales>
+    </dinosaurio>
+</dinopedia>

@@ -1,0 +1,357 @@
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
+    width: 100%;  /* Asegura que el cuerpo ocupe todo el ancho */
+}
+/*Componente global*/
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 100vw; /* Ocupa todo el ancho de la pantalla*/
+  height: 100vh; /* Ocupa todo el alto de la pantalla*/
+  background-color: black;
+}
+/*Configuracion de la barra superior*/
+.panelBarraSuperior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: green;
+  border:2px solid  #FFFFFF;
+  padding: 10px 20px ;
+}
+/*Titulo de la pagina*/
+.panelBarraSuperior h1{
+  margin:0;
+  flex-grow: 1;
+  text-align: center;
+}
+/*Imagen del usuario*/
+#usuario{
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+  display: flex;   /*Vuelve flexible el contenido del boton*/
+  justify-content: center; /*Centra el contenido del boton*/
+  align-items: center; /*Centra el contenido del boton*/
+  cursor: pointer;
+}
+
+#usuarioLogo{
+  width: 50px;
+  height: 50px;
+  padding: 10px 10px;
+}
+/*Contenedor de vinculos y contenido*/
+.zonaContenido{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1; 
+  overflow: hidden; /* Evita que el contenedor se desborde */
+  align-content: center;
+}
+/*Panel de los vinculos para la navegacion*/
+.panelVinculos {
+  width: 150px;
+  display: flex; 
+  flex-direction: column; /*Apila los elementos*/
+  gap:10px; /*Espacio entre cada boton*/
+  border-top: 2px solid #FFFFFF;
+  background-color: gray;
+  text-align: center;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+
+/*Zona de filtros*/
+.filtros {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 5px 10px;
+  gap: 10px;
+}
+
+/*Contenido de la vista de inicio*/
+  .vistaInicio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  background-color: gray;
+  border: 2px solid white;
+  text-align: justify;
+  padding: 10px 30px;
+}
+
+#imagenInicio1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  height: auto;
+}
+
+.vistaCatalogo {
+}
+
+/*Contenido de la vista catalogo parte 1*/
+.Contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  background-color: gray;
+  border: 2px solid white;
+  text-align: justify;
+  padding: 10px 30px;
+}
+
+
+/*Contenido de la vista catalogo parte 2*/
+#fichaTecnica{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  text-align: justify;
+  padding: 30px;
+  padding-left: 70px;
+  border: 2px solid white;
+  background-color: gray;
+}
+
+/*Etiquetas de la ficha tecnica*/
+#fichaTecnica h2{
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.dato-dinamico{
+    font-weight: normal; /* Que no sea negrita */
+    color: #0c7032;     /* Un color verde oscuro profesional */
+    font-style: bold;  /* Diferente estilo */
+    margin-left: 10px;
+}
+
+.datos {
+  padding: 30px 20px;
+}
+
+.contenedor-imagen {
+  display:block;
+  text-align: center;
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+/* 1. Asegurar que la vista ocupe todo el espacio disponible */
+.vistaRegistro {
+    display: flex;
+    flex-grow: 1; /* Esto hace que llene el espacio de la derecha */
+    background-color: gray;
+    border: 2px solid white;
+}
+
+/* 2. Configuración del Grid para expandirse */
+.campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas parejas */
+    gap: 15px;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* 3. Helper para elementos que deben cruzar las dos columnas */
+.full-width {
+    grid-column: span 2;
+}
+
+/* 4. Asegurar que los bloques y textareas no se salgan de sus celdas */
+.campo-bloque {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-bloque textarea {
+    width: 100%;
+    min-height: 50px;
+    resize: vertical;
+}
+
+/* 5. Asegurar que el título y hr ocupen el ancho total */
+#indicacion, .full-width {
+    grid-column: span 2;
+}
+
+/* Esto hace que todos los bloques de formulario se comporten bien */
+.formaNombre, .formaDescripccion, .formaGenero, .formaTipo, 
+.formaNombreC, .formaFecha, .formaDescubridor, .botonImagen {
+    display: flex;
+    flex-direction: column;
+}
+
+#indicacion{
+  grid-column: span 2;
+}
+
+/* Los contenedores de cada campo se alinean automáticamente en el Grid */
+.campo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.campos h2{
+  grid-column: span 2; /*Los titulos ocupan las dos columnas*/
+  margin:0; /* Limpia márgenes por defecto */
+}
+
+.campo-bloque textarea {
+  width: 100%; /* Asegura que el área de texto llene su columna */
+  min-height: 40px;
+  box-sizing: border-box;
+}
+
+.oculto {
+  display: none !important;
+}
+
+/* Aplica esto a todas tus vistas (Inicio, Contenido, FichaTecnica, Campos) */
+.vistaInicio, .Contenido, #fichaTecnica, .campos {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Ajuste específico para el botón y el hr */
+#btnSubir { grid-column: span 2; }
+#btnAgregar{ grid-column: span 2; }
+hr { grid-column: span 2; width: 100%; }
+
+#vistaUsuario{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.vistaUsuario {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para que ID y Nombre queden uno debajo de otro */
+    flex-grow: 1;           /* Esto hace que ocupe todo el espacio disponible */
+    background-color: gray; /* Un gris más claro para diferenciarlo */
+    border: 2px solid white;
+    padding: 30px;
+    overflow-y: auto;       /* Por si el contenido es muy largo */
+}
+
+/* Ajuste del botón dentro de la vista */
+#btnUsuario {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#imagenVistaUsuario {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#usuario {
+  /* Your styles here */
+}
+#usuarioLogo {
+  /* Your styles here */
+}
+#inicio {
+  /* Your styles here */
+}
+#Catalogo {
+  /* Your styles here */
+}
+#Registrar {
+  /* Your styles here */
+}
+#Mis contribuciones {
+  /* Your styles here */
+}
+#textoFiltro {
+  /* Your styles here */
+}
+#imagenInicio1 {
+  /* Your styles here */
+}
+#fichaTecnica {
+  /* Your styles here */
+}
+#nombre {
+  /* Your styles here */
+}
+#descripccion {
+  /* Your styles here */
+}
+#genero {
+  /* Your styles here */
+}
+#dieta {
+  /* Your styles here */
+}
+#nombreCientifico {
+  /* Your styles here */
+}
+#fechaDescubrimiento {
+  /* Your styles here */
+}
+#descubridor {
+  /* Your styles here */
+}
+#periodoVida {
+  /* Your styles here */
+}
+#imagenDinosaurio {
+  /* Your styles here */
+}
+
+#indicacion {
+  /* Your styles here */
+}
+#tfNombre {
+}
+#tfDescripccion {
+  /* Your styles here */
+}
+#tfGenero {
+  /* Your styles here */
+}
+#txTipo {
+  /* Your styles here */
+}
+#tfNombreC {
+  /* Your styles here */
+}
+#tfFechaD {
+  /* Your styles here */
+}
+#tfDescubridor {
+  /* Your styles here */
+}
+#tfPeriodoV {
+  /* Your styles here */
+}
+#btnSubir {
+  /* Your styles here */
+}
+#archivoInput {
+  /* Your styles here */
+}
